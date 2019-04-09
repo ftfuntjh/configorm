@@ -5,4 +5,4 @@ this simple project add unmarshall capacity to [goconfig](http://gowalker.org/ap
 **IMPORTANT**
 
 Your should use the newer ini parse library [ini](https://github.com/go-ini/ini).  
-this is a just simple fix.
+the  project is a just simple fix.
