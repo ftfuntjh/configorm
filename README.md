@@ -1,2 +1,8 @@
 # configorm
-this project is project https://github.com/Unknwon/goconfig  goconfig's wrap add Unmarshall support to convert plain config value to struct
+this simple project add unmarshall capacity to [goconfig](http://gowalker.org/api/v1/badge)
+========
+
+**IMPORTANT**
+
+Your should use the newer ini parse library [ini](https://github.com/go-ini/ini).  
+this is a just simple fix.

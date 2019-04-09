@@ -1,4 +1,9 @@
-package cofigorm
+// package configorm
+
+/*
+A simple goconfig package wrap used to add Unmarshall capacity
+*/
+package configorm
 
 import (
 	"fmt"
@@ -9,7 +14,8 @@ import (
 	"strings"
 )
 
-func Unmarshal(config *goconfig.ConfigFile, v interface{}) error {
+// Unmarshal ini config to use define struct
+func Unmarshall(config *goconfig.ConfigFile, v interface{}) error {
 	vType, vValue := reflect.TypeOf(v), reflect.ValueOf(v)
 
 	// convert * T to T both in type & value
@@ -26,7 +32,7 @@ func Unmarshal(config *goconfig.ConfigFile, v interface{}) error {
 		fType, fValue := vType.Field(i), vValue.Field(i)
 
 		if fValue.Kind() == reflect.Struct {
-			err := Unmarshal(config, fValue.Addr().Interface())
+			err := Unmarshall(config, fValue.Addr().Interface())
 
 			if err != nil {
 				return err

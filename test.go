@@ -1,4 +1,4 @@
-package cofigorm
+package configorm
 
 import "github.com/Unknwon/goconfig"
 
